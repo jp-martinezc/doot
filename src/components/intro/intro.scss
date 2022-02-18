@@ -1,4 +1,5 @@
-.intro {
-    background-color: green;
-    
+@import "../../global.scss";
+
+.intro{
+    background-color: $mainColor;
 }

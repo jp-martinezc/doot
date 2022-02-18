@@ -9,6 +9,7 @@
         
         position: relative;
         top: 70px;
+        scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         background-color: #fcde67;
         scrollbar-width: 0;
