@@ -2,4 +2,147 @@
 
 .intro{
     background-color: $mainColor;
+    transition: all 1.5s ease;
+    z-index: -2;
+    display: flex;
+    
+
+   
+
+    .pepas{
+        z-index: 3;
+    }
+
+
+    .left{
+        flex:0.5;
+        overflow: hidden;
+
+        .imgContainer{
+            margin-top: 150px;
+            margin-right: 50px;
+            z-index:2;
+            width: 900px;
+            height: 900px;
+            background-color: rgb(12,12,12);
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float:right;
+            transition: all 2s ease;
+            
+        }
+    }
+    .right{
+        flex:0.5;
+        overflow: hidden;
+        align-items: center;
+        position: relative;
+        
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+            justify-content: center;
+            transition: all 2s ease;
+
+        h2{
+            font-size: 35px;
+            transition: all 1s ease;
+
+        }
+        h1{
+            font-size: 60px;
+            margin: 10px 0;
+            transition: all 1s ease;
+        }
+        h3{
+            font-size: 30px;
+            transition: all 1s ease;
+            
+        }
+
+        
+
+        
+    }
+
+    .downlink{
+        color:rgb(12,12,12);
+        transition: all 1s ease; 
+        text-decoration: none;
+
+        .down{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            bottom: 10px;
+            left: 30%;
+            transition: all 1s ease;
+            text-decoration: none;
+            animation: arrowBlink 3s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100%{
+                opacity: 40%;
+            }
+            
+        }
+    }
+  
+
+   
+
+    }
+
+
+    &.active{
+        background-color: rgb(12,12,12);
+
+        .imgContainer{
+            background-color: $mainColor;
+            width: 500px;
+            height: 500px;
+            margin-top: 400px;
+            margin-right: 100px;
+        }
+
+        .wrapper{
+            color: $mainColor;
+            margin-top: -150px;
+            margin-left: 00px;
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 25px;
+            }
+            h3{
+                font-size: 15px;
+            }
+        }
+
+        .left{
+        flex:0.3;
+        }
+
+        .right{
+        flex:0.7;
+
+
+        .down{
+            left: 15%;
+        }
+
+        a{
+            color:$mainColor;
+        }
+        }
+    }
 }
+

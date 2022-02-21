@@ -7,8 +7,8 @@
     margin: 0px;
     position: fixed;
     top: 0;
-    z-index: 2;
-    transition: all 1s ease;
+    z-index: 3;
+    transition: all 1.5s ease;
 
     .wrapper{
         padding: 1px 30px;
@@ -82,23 +82,40 @@
 
 
     &.active{
-        background-color: rgb(73, 73, 73);
+        background-color: $mainColor;
+        
+        .wrapper{
+            .left{
+                .itemContainer{
+                    .icon{
+                        color:rgb(12, 12, 12)
+                    }
+                    .basicInfo{
+                        color: rgb(12, 12, 12);
+                    }
+                }
+            }
+        }
+        
+        
 
         .hamburguer{
             
             span{
                 &:first-child{
-                    background-color: white;
+                    background-color: black;
                     transform: rotate(45deg);
                 }
                 &:nth-child(2){
                     opacity: 0;
                 }
                 &:last-child{
-                background-color: white;
+                background-color: black;
                 transform: rotate(-45deg);
                 }
             }
         }
+
+        
     }
 }

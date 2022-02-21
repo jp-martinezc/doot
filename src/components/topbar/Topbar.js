@@ -1,6 +1,7 @@
 import "./topbar.scss"
 import logoo from "./logo.png"
 import {Mail, Phone} from "@material-ui/icons"
+import logob from "./logob.PNG"
 
 
 export default function Topbar({menuOpen, setMenuOpen}) {
@@ -9,7 +10,7 @@ export default function Topbar({menuOpen, setMenuOpen}) {
         <div className={"topbar " + (menuOpen && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo"> <img src={logoo} alt="a" className="logoImage"></img> </a>
+                    <a href="#intro" className="logo"> <img src={(menuOpen ? logob : logoo)} alt="a" className="logoImage"></img> </a>
                     
                     <div className="itemContainer">
 
