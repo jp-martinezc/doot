@@ -4,13 +4,14 @@ import {Mail, Phone} from "@material-ui/icons"
 import logob from "./logob.PNG"
 
 
-export default function Topbar({menuOpen, setMenuOpen}) {
+export default function Topbar({menuOpen, setMenuOpen, queMenu, setQueMenu}) {
+    
 
     return(
-        <div className={"topbar " + (menuOpen && "active")}>
+        <div className={"topbar " + (menuOpen && "active") + queMenu}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo"> <img src={(menuOpen ? logob : logoo)} alt="a" className="logoImage"></img> </a>
+                    <a href="#intro" className="logo"> <img src={(menuOpen && queMenu==="amarillo" ? logob : menuOpen && queMenu==="negro"? logoo: menuOpen? logob: logoo)} alt="a" className="logoImage"></img> </a>
                     
                     <div className="itemContainer">
 
@@ -28,6 +29,7 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                         <span className="line2"> </span>
                         <span className="line3"> </span>
                     </div>
+                    
                 </div>
             </div>
         </div>

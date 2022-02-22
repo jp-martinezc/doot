@@ -1,4 +1,31 @@
+@import "../../global.scss";
+
 .portfolio {
 
-    background-color: lightgray;
+    background-color: $mainColor;
+
+    .barragonita{
+        background-color: rgb(12, 12, 12);
+        height: 100%;
+        width: 60%;
+        position: relative;
+        top: 0%;
+        clip-path: polygon(0 0, 80% 0, 60% 100%, 0 100%);
+        transition: all 8s ease;
+        left: -1000px;
+        opacity: 7%;
+        
+        
+    }
+
+    &.movido{
+        .barragonita{
+            left: 0px;
+        }
+    }
+
+   
+
+    
 }
+

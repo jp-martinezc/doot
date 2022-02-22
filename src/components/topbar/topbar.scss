@@ -81,7 +81,7 @@
     }
 
 
-    &.active{
+    &.activeamarillo{
         background-color: $mainColor;
         
         .wrapper{
@@ -111,6 +111,33 @@
                 }
                 &:last-child{
                 background-color: black;
+                transform: rotate(-45deg);
+                }
+            }
+        }
+
+        
+    }
+
+    &.activenegro{
+        background-color: rgb(12, 12, 12);
+        
+        
+        
+        
+
+        .hamburguer{
+            
+            span{
+                &:first-child{
+                   
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                
                 transform: rotate(-45deg);
                 }
             }

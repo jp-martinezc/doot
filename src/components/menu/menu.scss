@@ -72,7 +72,7 @@
         
     }
 
-    &.active{
+    &.activeamarillo{
     right: 0;
     background-color: #fcde67;
     .list{
@@ -101,5 +101,42 @@
         
 
     }
+
+    &.activenegro{
+        right: 0;
+        background-color: rgb(12,12,12);
+        color: #fcde67;
+        .list{
+            .i{
+                position: relative;
+                right: -60px;
+                color: white;
+                
+            }
+            .p{
+                position: relative;
+                right: -45px;
+                color: white;
+            }
+            .w{
+                position: relative;
+                right: -30px;
+                color: white;
+            }
+            .d{
+                position: relative;
+                right: -15px;
+                color: white;
+            }
+            .f{
+                position: relative;
+                color: white;
+               
+            }
+            
+        }
+            
+    
+        }
 
 }

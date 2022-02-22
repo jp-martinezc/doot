@@ -1,9 +1,12 @@
 import "./menu.scss"
 
-export default function Menu({menuOpen, setMenuOpen}) {
+
+export default function Menu({menuOpen, setMenuOpen, queMenu, setQueMenu}) {
+    
 
     return(
-        <div className={"menu " + (menuOpen && "active")} id="menu">
+        
+        <div className={"menu " + (menuOpen && "active") + queMenu} id="menu">
 
             <ul className="list">
                 <li className="i" onClick={()=> setMenuOpen(false)}>
@@ -21,6 +24,7 @@ export default function Menu({menuOpen, setMenuOpen}) {
                 <li className="f" onClick={()=> setMenuOpen(false)}>
                     <a href="#footer">Contact</a>
                 </li>
+                
             </ul>
 
         </div>
