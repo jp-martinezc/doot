@@ -16,7 +16,6 @@
     "react-particles-js": "^3.6.0",
     "react-scripts": "5.0.0",
     "sass": "^1.49.7",
-    "tsparticles": "^1.41.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
