@@ -3,24 +3,117 @@
 .portfolio {
 
     background-color: $mainColor;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        position: relative;
+
+    
 
     .barragonita{
-        background-color: rgb(12, 12, 12);
+        background-color: #FFE682;
         height: 100%;
-        width: 60%;
-        position: relative;
-        top: 0%;
-        clip-path: polygon(0 0, 80% 0, 60% 100%, 0 100%);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        clip-path: polygon(0 0, 65% 0, 55% 100%, 0 100%);
         transition: all 8s ease;
         left: -1000px;
-        opacity: 7%;
+        opacity: 80%;
+        align-self: left;
+        z-index: 0;
         
         
+    }
+
+    .cartuchis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding-top: 80px;
+
+        h1{
+            font-size: 50px;
+        }
+        ul{
+           
+            margin: 10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        li{
+            font-size: 16px;
+            margin-right: 50px;
+            padding: 7px;
+            border-radius: 10px;
+            cursor: pointer;
+
+        &.active{
+            background-color: $topBar;
+            color: white;
+        }
+        }
+        .container{
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            
+            opacity: 100%;
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .item{
+            width: 220px;
+            height: 150px;
+            border-radius: 20px;
+            border: 1px solid rgb(218, 218, 128);
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 2;
+            transition: 0.5s ease;
+            
+
+            h3{
+                position: absolute;
+                font-size: 20px;
+            }
+            .imagenItem{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 2;
+            }
+
+            &:hover{
+                background-color: $topBar;
+
+                img{
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+            }
+        }
+
+         
     }
 
     &.movido{
         .barragonita{
             left: 0px;
+            align-self: left;
         }
     }
 

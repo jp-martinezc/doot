@@ -1,3 +1,4 @@
+@import "../../global.scss";
 
 
 .menu{
@@ -9,12 +10,12 @@
     position: fixed;
     top: 0;
     right: -800px;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center ;
     justify-content: center;
-    clip-path: polygon(calc(100vh - 60%) 0, 100% 0%, 100% 100%, calc(100vh - 80%) 100%);
+    clip-path: polygon(calc(100vh - 35vh) 0, 100% 0%, 100% 100%, calc(100vh - 55vh) 100%);
     color:white;
     transition: all 1.5s ease;
     
@@ -74,23 +75,23 @@
 
     &.activeamarillo{
     right: 0;
-    background-color: #fcde67;
+    background-color: $mainColor;
     .list{
         .i{
             position: relative;
-            right: -60px;
+            right: -100px;
         }
         .p{
             position: relative;
-            right: -45px;
+            right: -85px;
         }
         .w{
             position: relative;
-            right: -30px;
+            right: -70px;
         }
         .d{
             position: relative;
-            right: -15px;
+            right: -55px;
         }
         .f{
             position: relative;
@@ -105,27 +106,27 @@
     &.activenegro{
         right: 0;
         background-color: rgb(12,12,12);
-        color: #fcde67;
+        color: $mainColor;
         .list{
             .i{
                 position: relative;
-                right: -60px;
+                right: -100px;
                 color: white;
                 
             }
             .p{
                 position: relative;
-                right: -45px;
+                right: -85px;
                 color: white;
             }
             .w{
                 position: relative;
-                right: -30px;
+                right: -70px;
                 color: white;
             }
             .d{
                 position: relative;
-                right: -15px;
+                right: -55px;
                 color: white;
             }
             .f{
