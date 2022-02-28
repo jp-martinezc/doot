@@ -11,16 +11,17 @@ import { useState } from "react"
 function App() {
   const [menuOpen,setMenuOpen] = useState(false);
   const [queMenu,setQueMenu] = useState("amarillo");
+  const [topbarColor,setTopbarColor] = useState("negro");
  
   return (
     <div className="app">
       
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu}/>
+      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu} topbarColor={topbarColor} setTopbarColor={setTopbarColor}/>
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu}/>
       <div className="sections">
-        <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu}/>
-        <Portfolio menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu}/>
-        <Works/>
+        <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu} topbarColor={topbarColor} setTopbarColor={setTopbarColor}/>
+        <Portfolio menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu} topbarColor={topbarColor} setTopbarColor={setTopbarColor}/>
+        <Works queMenu={queMenu} setQueMenu={setQueMenu} setMenuOpen={setMenuOpen} setTopbarColor={setTopbarColor}/>
         
         <Drawings/>
         <Footer/>

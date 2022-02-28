@@ -145,4 +145,44 @@
 
         
     }
+
+    &.falseamarillo{
+        &.amarillo{
+
+            background-color: $mainColor;
+        
+        .wrapper{
+            .left{
+                .itemContainer{
+                    .icon{
+                        color:rgb(12, 12, 12)
+                    }
+                    .basicInfo{
+                        color: rgb(12, 12, 12);
+                    }
+                }
+            }
+        }
+        
+        
+
+        .hamburguer{
+            
+            span{
+                &:first-child{
+                    background-color: black;
+                    
+                }
+                &:nth-child(2){
+                    background-color: black;
+                }
+                &:last-child{
+                background-color: black;
+                
+                }
+            }
+        }
+
+        }
+    }
 }

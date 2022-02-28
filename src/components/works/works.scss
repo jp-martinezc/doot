@@ -1,3 +1,121 @@
+@import "../../global.scss";
+
+
 .works{
-    background-color: antiquewhite;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .rightArrow{
+        font-size: 100px;
+        position: absolute;
+        right: 100px;
+        color: $mainColor;
+        cursor: pointer;
+    }
+
+    .leftArrow{
+        font-size: 100px;
+        position: absolute;
+        left: 100px;
+        color: $mainColor;
+        cursor: pointer;
+
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-in-out;
+
+        .container{
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+
+        .item{
+            width: 700px;
+            height: 100%;
+            background-color: $mainColor;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            .left{
+                flex: 4;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .leftContainer{
+                    width: 85%;
+                    height: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+
+                    h2{
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                        
+                    }
+                    p{
+                        font-size: 13px;
+                        margin-bottom: 20px;
+                    }
+
+                }
+
+                .link{
+                    text-decoration: none;
+                    font-size: medium;
+                    color: rgb(12, 12, 12);
+                    
+                }
+                
+            }
+
+            .right{
+                flex: 8;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                
+
+                .bungo{
+                    transform: rotate(-10deg);
+                    height: 120%;
+                    background-color: rgb(255, 252, 187);
+                }
+
+                .kimberly{
+                    transform: rotate(-10deg);
+                    height: 100%;
+                    width: 80%;
+                }
+
+                .yo{
+                    transform: rotate(-10deg);
+                    height: 150%;
+                    width:60%; 
+                    background-color: rgb(255, 252, 187);
+                }
+            }
+        }
+        }
+    }
+
+    
 }

@@ -32,6 +32,18 @@
             float:right;
             transition: all 2s ease;
             
+            .yo{
+                width: 600px;
+                margin-left: -100px;
+                transition: all 2s ease;
+
+                &.active{
+                    width: 300px;
+                margin-left: 50px;
+                transition: all 2s ease;
+
+                }
+            }
         }
     }
     .right{

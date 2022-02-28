@@ -4,6 +4,8 @@ import {ArrowDropDown} from "@material-ui/icons"
 import { init } from 'ityped'
 import {useEffect, useRef} from "react";
 import { withThemeCreator } from "@material-ui/styles";
+import yo from '../../images/yo.png';
+import yoAsustado from '../../images/yoAsustado.png';
 
 
 let config ={
@@ -22,7 +24,7 @@ top: 0,
 left: 0
 }
 
-export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu}) {
+export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTopbarColor}) {
 
     const textRef = useRef();
 
@@ -38,13 +40,14 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu}) {
     },[])
 
     return(
-        <div className={"intro " + (menuOpen && "active")} id="intro" onMouseOver={()=> setQueMenu("amarillo")}> 
+        <div className={"intro " + (menuOpen && "active")} id="intro" onMouseOver={()=> a()}> 
 
         <ParticlesBg config={config} type="cobweb" color="#fcde67" color="#FFB221" num={30} bg={bgg} />
 
         <div className="left">
             <div className="imgContainer">
-                <a>a</a>
+                <img className={"yo " + (menuOpen && "active") }  alt="" src={menuOpen? yoAsustado: yo}></img>
+
             </div>
         </div>
         <div className="right">
@@ -66,5 +69,10 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu}) {
             </div>
         </div>
     )
+
+    function a(){
+        setQueMenu("amarillo");
+        setTopbarColor("negro");
+    }
 
 }

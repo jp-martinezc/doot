@@ -9,10 +9,10 @@ import {featuredPortfolio,
         dataPortfolio } from '../../data';
 
 
-export default function Portfolio( {queMenu, setQueMenu} ) {
+export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
 
     const [movido, setMovido] = useState("nomovido");
-    console.log(movido);
+    
     const [selected, setSelected] = useState("featured");
     const [data, setData] = useState([]);
 
@@ -103,6 +103,7 @@ export default function Portfolio( {queMenu, setQueMenu} ) {
     function a (){
         setQueMenu("negro");
         setMovido("movido");
+        setTopbarColor("negro");
         
     }
 
