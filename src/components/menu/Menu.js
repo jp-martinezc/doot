@@ -16,10 +16,7 @@ export default function Menu({menuOpen, setMenuOpen, queMenu, setQueMenu}) {
                     <a href="#portfolio">Portfolio</a>
                 </li>
                 <li className="w" onClick={()=> setMenuOpen(false)}>
-                    <a href="#works">Works</a>
-                </li>
-                <li className="d" onClick={()=> setMenuOpen(false)}>
-                    <a href="#drawings">Drawings</a>
+                    <a href="#works">Skills</a>
                 </li>
                 <li className="f" onClick={()=> setMenuOpen(false)}>
                     <a href="#footer">Contact</a>

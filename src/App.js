@@ -22,8 +22,6 @@ function App() {
         <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu} topbarColor={topbarColor} setTopbarColor={setTopbarColor}/>
         <Portfolio menuOpen={menuOpen} setMenuOpen={setMenuOpen} queMenu={queMenu} setQueMenu={setQueMenu} topbarColor={topbarColor} setTopbarColor={setTopbarColor}/>
         <Works queMenu={queMenu} setQueMenu={setQueMenu} setMenuOpen={setMenuOpen} setTopbarColor={setTopbarColor}/>
-        
-        <Drawings/>
         <Footer/>
       </div>
     </div>
