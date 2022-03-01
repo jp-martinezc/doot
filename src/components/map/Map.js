@@ -8,7 +8,7 @@ class MapContainer extends Component{
             <Map
             
             google= {this.props.google}
-            style = {{width:"100%", Height:"100%"}}
+            style = {{width:"100%", Height:"20%"}}
             />
         )
     }

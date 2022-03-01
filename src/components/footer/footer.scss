@@ -37,6 +37,39 @@
                 height: 50px;
                 border-radius: 20px;
                 margin-bottom: 30px;
+                transition: all 1s ease;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                text-decoration: none;
+
+                &:hover{
+                    width: 320px;
+                    height: 52px;
+                }
+
+                .leftCard{
+                    flex: 1;
+
+                    .dscLogo{
+                        height: 40px;
+                        width: 40px;
+                        margin-left: 10px;
+                        color: rgb(12,12,12);
+                    }
+                }
+
+                .rightCard{
+                    flex: 4;
+                    color: rgb(12,12,12);
+
+                    h3{
+                        text-decoration: none;
+                        text-shadow: none;
+                        text-decoration-line: none;
+                    }
+                    
+                }
 
             }
         }
