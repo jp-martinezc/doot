@@ -1,3 +1,146 @@
+@import "../../global.scss";
+
 .footer {
-    background-color: lightcoral;
+    background-color: rgb(12,12,12);
+    display: flex;
+    flex-direction: column;
+
+
+
+ .contact{
+     display: flex;
+     flex: 10;
+     
+
+    
+
+    .left{
+        flex: 8;
+        background-color: rgb(18, 18, 18);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        justify-content: space-around;
+
+        .leftContainer{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .item{
+                background-color: $mainColor;
+                color: white;
+                width: 300px;
+                height: 50px;
+                border-radius: 20px;
+                margin-bottom: 30px;
+
+            }
+        }
+    }
+
+    .right{
+        flex: 12;
+        background-color: rgb(30, 30, 30);
+        display: flex;
+        flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        .wholeRight{
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70%;
+            width: 100%;
+            align-self: center;
+            
+            
+    
+    
+            h2{
+                font-size: 30px;
+                color: $mainColor;
+            }
+    
+            form{
+                width: 70%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+    
+            input{
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                color: rgb(255, 255, 255);
+                background-color: rgb(17, 17, 17);
+                border-radius: 10px;
+                border: none;
+                padding: 16px;
+                box-sizing: border-box;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+    
+            textarea{
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                border-radius: 15px;
+                border: none;
+                color: rgb(255, 255, 255);
+                background-color: rgb(17, 17, 17);
+                resize: none;
+                padding: 16px;
+                box-sizing: border-box;
+    
+                &:focus{
+                    outline: none;
+                }
+            }
+    
+            button{
+                width: 150px;
+                height: 30px;
+                color: rgb(12,12,12);
+                background-color: $mainColor;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+    
+                &:focus{
+                    outline: none;
+                }
+            }
+    
+            span{
+                color: green;
+            }
+    
+        }
+
+    }
+  }
+  .mapa{
+    display: flex;
+    flex: 3;
+    background-color: $mainColor;
+
+    .mapaImg{
+        width: 100%;
+        margin-top: 14px;
+    }
+  }
+    
 }
