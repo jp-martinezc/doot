@@ -5,23 +5,52 @@ import Map from '../map/Map.js';
 import {Instagram, LinkedIn, Person} from "@material-ui/icons"
 import dsc from '../../images/discord.png';
 import hv from '../../documents/JuanPabloMartinez.pdf'
+import { send } from 'emailjs-com';
+
+
+
+
+
 
 
 
 export default function Footer() {
+    
     const [message, setMessage] = useState(false);
 
-    
+    const [toSend, setToSend] = useState({
+        email: '',
+        message: ''
+      });
 
     const handleSubmit = (e)=>{
         e.preventDefault();
+
+        send(
+            'service_njv08ls',
+            'template_62a0sgc',
+            toSend,
+            'wO2uBhS6qKo1gn0ko'
+          )
+            .then((response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+              console.log('FAILED...', err);
+            });
+
+         
         
     }
+
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+      };
 
     return(
         <div className="footer" id="footer">
 
-            
+            <Map/>
             <div className="contact">
             <div className="left">
                 <div className="leftContainer">
@@ -64,11 +93,12 @@ export default function Footer() {
                 <div className="wholeRight">
                 <h2>Contact</h2>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="email"/>
-                    <textarea placeholder="message"></textarea>
+                    <input type="text" placeholder="email" name='email' value={toSend.email} onChange={handleChange}/>
+                    <textarea placeholder="message" name='message' value={toSend.message} onChange={handleChange}></textarea>
                     <button type="submit" onClick={()=> setMessage(!message)}>send</button>
-                    {message && <span>Gracias! Responderé lo más pronto posible! :D</span>}
+                    
                 </form>
+                {message && <span>Gracias! Responderé lo más pronto posible! :D</span>}
                 </div>
 
             </div>

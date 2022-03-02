@@ -88,9 +88,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 70%;
+            height: 75%;
             width: 100%;
             align-self: center;
+            overflow: hidden;
             
             
     
@@ -119,6 +120,7 @@
                 border: none;
                 padding: 16px;
                 box-sizing: border-box;
+                margin-bottom: 7px;
 
                 &:focus{
                     outline: none;
@@ -136,6 +138,7 @@
                 resize: none;
                 padding: 16px;
                 box-sizing: border-box;
+                margin-bottom: 12px;
     
                 &:focus{
                     outline: none;
@@ -157,10 +160,13 @@
                 }
             }
     
-            span{
-                color: green;
-            }
+            
     
+        }
+        span{
+            color: $mainColor;
+            overflow: hidden;
+            margin-top: 30px;
         }
 
     }
