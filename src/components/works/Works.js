@@ -54,7 +54,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
     }
 
     return(
-        <div className="works" id="works" onMouseOver={() => a()}> 
+        <div className="works" id="works" onMouseOver={() => a()} onTouchMove={()=> a()} onDrag={()=> a()} onScroll={()=> a()}> 
         <div className="slider" style={{transform: `translateX(-${currentSlide *100}vw)` }}>
         
             {(data.map((d) => (

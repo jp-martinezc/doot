@@ -18,6 +18,9 @@
     clip-path: polygon(calc(100vh - 35vh) 0, 100% 0%, 100% 100%, calc(100vh - 55vh) 100%);
     color:white;
     transition: all 1.5s ease;
+    @include mobile{
+        clip-path: polygon(calc(100vh - 23vh) 0, 100% 0%, 100% 100%, calc(100vh - 33vh) 100%);
+    }
     
 
     .list{
@@ -30,6 +33,10 @@
         font-weight: 300;
         color: rgb(12,12,12);
         z-index: 2;
+        @include mobile{
+            font-size: 23px;
+            right: 15px;
+        }
         
         li{
             margin-bottom: 25px;
@@ -80,22 +87,37 @@
         .i{
             position: relative;
             right: -100px;
+            @include mobile{
+                right: -100px;
+            }
         }
         .p{
             position: relative;
             right: -85px;
+            @include mobile{
+                right: -90px;
+            }
         }
         .w{
             position: relative;
             right: -70px;
+            @include mobile{
+                right: -80px;
+            }
         }
         .d{
             position: relative;
             right: -55px;
+            @include mobile{
+                right: -70px;
+            }
         }
         .f{
             position: relative;
             right: -50px;
+            @include mobile{
+                right: -70px;
+            }
            
         }
         
@@ -111,29 +133,44 @@
         .list{
             .i{
                 position: relative;
-                right: -100px;
+                right: -105px;
                 color: white;
+                @include mobile{
+                    
+                }
                 
             }
             .p{
                 position: relative;
                 right: -85px;
                 color: white;
+                @include mobile{
+                    right: -95px;
+                }
             }
             .w{
                 position: relative;
                 right: -70px;
                 color: white;
+                @include mobile{
+                    right: -85px;
+                }
             }
             .d{
                 position: relative;
                 right: -55px;
                 color: white;
+                @include mobile{
+                    right: -65px;
+                }
             }
             .f{
                 position: relative;
                 right: -50px;
                 color: white;
+                @include mobile{
+                    right: -75px;
+                }
                
             }
             

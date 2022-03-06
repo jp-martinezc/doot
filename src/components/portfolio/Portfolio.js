@@ -62,7 +62,7 @@ export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
     },[selected]);
 
     return(
-        <div className={"portfolio " + movido} id="portfolio" onMouseOver={()=> a()}>
+        <div className={"portfolio " + movido} id="portfolio" onMouseOver={()=> a()} onTouchMove={()=> a()} onTouchMoveCapture={()=> a()}>
             
 
             <div className="cartuchis"> 

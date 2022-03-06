@@ -1,3 +1,18 @@
 $mainColor: #fcde67;
 $topBar: #253CB0;
 $yellow2: #FFE682;
+
+$width: 768px;
+$height: 582px;
+
+@mixin mobile{
+        @media (max-width: #{$width}){
+            @content
+        }
+};
+
+@mixin short{
+        @media (max-height: #{$height}){
+            @content
+        }
+};

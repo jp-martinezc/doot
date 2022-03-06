@@ -40,9 +40,9 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTo
     },[])
 
     return(
-        <div className={"intro " + (menuOpen && "active")} id="intro" onMouseOver={()=> a()}> 
+        <div className={"intro " + (menuOpen && "active")} id="intro" onMouseOver={()=> a()} onTouchMove={()=> a()} onTouchMoveCapture={()=> a()}> 
 
-        <ParticlesBg config={config} type="cobweb" color="#fcde67" color="#FFB221" num={30} bg={bgg} />
+        <ParticlesBg config={config} type="cobweb" color="#fcde67" num={30} bg={bgg} />
 
         <div className="left">
             <div className="imgContainer">

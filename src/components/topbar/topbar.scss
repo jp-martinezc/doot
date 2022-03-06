@@ -15,6 +15,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+         margin-left: 30px;
+         @include mobile{
+            margin-left: 0px;
+            padding: 1px 15px;
+        }
 
 
         .left{
@@ -29,6 +34,9 @@
                 text-decoration: none;
                 color: inherit;
                 margin-top: 5px;
+                @include mobile{
+                   
+                }
             }
 
             .logoImage
@@ -43,17 +51,28 @@
                 display: flex;
                 margin-left: 30px;
                 align-items: center;
+                @include mobile{
+                    margin-left: 0px;
+                    opacity: 0;
+                    width: 85%;
+                }
 
                 .basicInfo{
                     font-size: large;
                     margin-left: 10px;
                     align-items: center;
                     color: white;
+                    @include mobile{
+                        opacity: 0; 
+                    }
                 }
 
                 .icon{
                     margin-left: 20px;
                     color: white;
+                    @include mobile{
+                        opacity: 0; 
+                    }
                 }
             }
         }
