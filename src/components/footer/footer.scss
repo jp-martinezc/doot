@@ -51,8 +51,8 @@
                 cursor: pointer;
                 text-decoration: none;
                 @include mobile{
-                    margin-bottom: 20px;
-                    height: 43px;
+                    margin-bottom: 14px;
+                    height: 55px;
                     display: flex;
                     
                 }
@@ -71,8 +71,8 @@
                         margin-left: 10px;
                         color: rgb(12,12,12);
                         @include mobile{
-                            height: 35px;
-                            width: 35px;
+                            height: 28px;
+                            width: 28px;
                         }
                     }
                 }
