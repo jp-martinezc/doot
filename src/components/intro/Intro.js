@@ -3,7 +3,6 @@ import ParticlesBg from 'particles-bg'
 import {ArrowDropDown} from "@material-ui/icons"
 import { init } from 'ityped'
 import {useEffect, useRef} from "react";
-import { withThemeCreator } from "@material-ui/styles";
 import yo from '../../images/yo.png';
 import yoAsustado from '../../images/yoAsustado.png';
 

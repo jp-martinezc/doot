@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./portfolio.scss"
-import javaImg from '../../images/java_logo_640.jpg';
 import PortfolioList from "../portfolioList/PortfolioList";
 import {featuredPortfolio,
      webPortfolio,
@@ -57,6 +56,7 @@ export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
             case "data":
                 setData(dataPortfolio);
                 break;
+            default:    
         }
 
     },[selected]);

@@ -54,7 +54,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
     }
 
     return(
-        <div className="works" id="works" onMouseOver={() => a()} onTouchMove={()=> a()} onDrag={()=> a()} onScroll={()=> a()}> 
+        <div className="works" id="works" onMouseOver={() => a()} onTouchMove={()=> a()} onDrag={()=> a()} onTouchMoveCapture={()=> a()}> 
         <div className="slider" style={{transform: `translateX(-${currentSlide *100}vw)` }}>
         
             {(data.map((d) => (
@@ -73,7 +73,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
 
                     </div>
                     <div className="right">
-                        <img className={d.imgcn} src={d.img}></img>
+                        <img className={d.imgcn} src={d.img} alt=""></img>
                     </div>
                 </div>
                 
@@ -108,7 +108,8 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
                 return (<Work></Work>);
 
             case "person":
-                return (<Person></Person>)
+                return (<Person></Person>);
+            default:    
 
            
         }
