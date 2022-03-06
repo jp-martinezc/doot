@@ -1,7 +1,7 @@
-import { Height } from '@material-ui/icons';
-import { Map, GoogleApiWrapper, GoogleMap, withScriptsjs, withGoogleMap } from 'google-maps-react';
+
+import { Map, GoogleApiWrapper} from 'google-maps-react';
 import {Component} from "react";
-const apiKey = process.env.GOOGLE_API;
+
 
 
 

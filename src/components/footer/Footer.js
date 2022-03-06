@@ -1,7 +1,6 @@
 import "./footer.scss";
 import { useState } from "react";
 import mapa from '../../images/where.png';
-import Map from '../map/Map.js';
 import {Instagram, LinkedIn, Person,Phone, Email} from "@material-ui/icons"
 import dsc from '../../images/discord.png';
 import hv from '../../documents/JuanPabloMartinez.pdf'
@@ -87,22 +86,22 @@ export default function Footer() {
                         <h3>Descarga mi hoja de vida!</h3>
                     </div>
                 </a>
-                <a className="item Mobile">
+                <div className="item Mobile" href="">
                 <div className="leftCard">
                         <Phone className="dscLogo" />
                     </div>
                     <div className="rightCard">
                         <h3>+57 313 606 80 22</h3>
                     </div>
-                </a>
-                <a className="item Mobile">
+                </div>
+                <div className="item Mobile" href="">
                 <div className="leftCard">
                         <Email className="dscLogo" />
                     </div>
                     <div className="rightCard">
                         <h3>juanpis.martinez27@gmail.com</h3>
                     </div>
-                </a>
+                </div>
                 
                 
              </div>
