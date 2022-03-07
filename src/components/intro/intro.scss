@@ -24,7 +24,7 @@
         overflow: hidden;
 
         .imgContainer{
-            margin-top: 150px;
+            margin-top: 130px;
             margin-right: 50px;
             z-index:2;
             width: 900px;
@@ -179,7 +179,7 @@
             background-color: $mainColor;
             width: 500px;
             height: 500px;
-            margin-top: 400px;
+            margin-top: 100px;
             margin-right: 100px;
             @include mobile{
                 width: 300px;
@@ -188,6 +188,15 @@
                 margin-right:220px;
                 z-index: 4;
                 overflow:visible;
+                background-color: $yellow2;
+            }
+            @include short{
+                width: 300px;
+                height: 300px; 
+                margin-top: 100px; 
+                margin-right:220px;
+                z-index: 4;
+                overflow-y: hidden;
                 background-color: $yellow2;
             }
             
@@ -199,6 +208,14 @@
             margin-left: 00px;
             @include mobile{
                 margin-left: 0px;
+                margin-top: -50px;
+                left: 5%;
+                
+                overflow: visible;
+                width: 90%;
+            }
+            @include short{
+                margin-left: -40px;
                 margin-top: -50px;
                 left: 5%;
                 

@@ -85,6 +85,10 @@
                 width: 100%;
                 margin-top: 20px;
             }
+            @include short{
+                width: 100%;
+                margin-top: 20px;
+            }
             
             
             opacity: 100%;

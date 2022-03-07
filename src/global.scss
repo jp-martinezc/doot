@@ -3,7 +3,7 @@ $topBar: #253CB0;
 $yellow2: #FFE682;
 
 $width: 820px;
-$height: 582px;
+$height: 600px;
 
 @mixin mobile{
         @media (max-width: #{$width}){

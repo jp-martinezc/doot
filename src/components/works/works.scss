@@ -18,6 +18,9 @@
             display: none;
             
         }
+        @include short{
+            right: 5px;
+        }
     }
 
     .leftArrow{
@@ -29,6 +32,9 @@
         @include mobile{
             display: none;
             
+        }
+        @include short{
+            left: 5px;
         }
 
     }

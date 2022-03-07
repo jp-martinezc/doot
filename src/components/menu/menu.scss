@@ -21,6 +21,9 @@
     @include mobile{
         clip-path: polygon(calc(100vh - 23vh) 0, 100% 0%, 100% 100%, calc(100vh - 33vh) 100%);
     }
+    @include short{
+        clip-path: polygon(calc(100vh - 5vh) 0, 100% 0%, 100% 100%, calc(100vh - 15vh) 100%);
+    }
     
 
     .list{
