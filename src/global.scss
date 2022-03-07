@@ -3,6 +3,7 @@ $topBar: #253CB0;
 $yellow2: #FFE682;
 
 $width: 820px;
+$widthtabla: 1150px;
 $height: 600px;
 
 @mixin mobile{
@@ -16,3 +17,12 @@ $height: 600px;
             @content
         }
 };
+
+@mixin tabla{
+    @media (max-width: #{$widthtabla}){
+        @content
+    }
+};
+
+
+
