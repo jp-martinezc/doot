@@ -168,6 +168,11 @@
                     height: 70%;
                     
                 }
+                @include muypeques{
+                    width: 90%;
+                    height: 80%;
+                    
+                }
             }
     
             input{
@@ -181,6 +186,10 @@
                 padding: 16px;
                 box-sizing: border-box;
                 margin-bottom: 7px;
+                @include muypeques{
+                    padding: 16px;
+                    width: 200px;
+                }
                 
 
                 &:focus{
@@ -200,6 +209,10 @@
                 padding: 16px;
                 box-sizing: border-box;
                 margin-bottom: 12px;
+                @include muypeques{
+                    padding: 16px;
+                    width: 200px;
+                }
     
                 &:focus{
                     outline: none;

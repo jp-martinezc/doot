@@ -6,6 +6,10 @@ import {useEffect, useRef} from "react";
 import yo from '../../images/yo.png';
 import yoAsustado from '../../images/yoAsustado.png';
 
+//import {FormattedMessage} from "react-intl";
+import { I18nPropvider, LOCALES } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
+
 
 let config ={
     color: "#FFB221",
@@ -23,22 +27,41 @@ top: 0,
 left: 0
 }
 
-export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTopbarColor}) {
+export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTopbarColor, language}) {
 
     const textRef = useRef();
+    const textRef2 = useRef();
+
+    const whatAmI = [
+        'Developer', 'Software Engineer', 'Designer', 'Dog Lover' 
+    ];
+    const queSoy = [
+        'Desarrollador', 'Ingeniero de Sistemas', 'Diseñador', 'Amante de Perros' 
+    ];
+
+
 
     useEffect(()=>{
-
+        
         init(textRef.current, { 
             showCursor: false, 
-            strings: ['Developer', 'Software Engineer', 'Designer', 'Dog Lover' ],
+            strings: whatAmI
             
             
         })
+        init(textRef2.current, { 
+            showCursor: false, 
+            strings: queSoy
+            
+            
+        })  
+        
+       
 
     },[])
 
     return(
+        <I18nPropvider locale={language}>
         <div className={"intro " + (menuOpen && "active")} id="intro" onMouseOver={()=> a()} onTouchMove={()=> a()} onTouchMoveCapture={()=> a()}> 
 
         <ParticlesBg config={config} type="cobweb" color="#fcde67" num={30} bg={bgg} />
@@ -51,9 +74,10 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTo
         </div>
         <div className="right">
             <div className="wrapper">
-                <h2>Hi! i'm</h2>
+                <h2>{translate('hello')}</h2>
                 <h1>Juan Pablo Martinez</h1>
-                <h3>im a <span ref={textRef}></span> </h3> 
+                <h3 className={"en " + language}>{translate('im')}  <span ref={textRef}></span> </h3> 
+                <h3 className={"es " + language}>{translate('im')}  <span ref={textRef2}></span> </h3> 
             </div>
 
         <a href="#intro" className="downlink">
@@ -67,6 +91,7 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTo
             
             </div>
         </div>
+        </I18nPropvider>
     )
 
     function a(){

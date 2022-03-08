@@ -5,6 +5,8 @@ import {Instagram, LinkedIn, Person,Phone, Email} from "@material-ui/icons"
 import dsc from '../../images/discord.png';
 import hv from '../../documents/JuanPabloMartinez.pdf'
 import { send } from 'emailjs-com';
+import { I18nPropvider } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
 
 
 
@@ -13,7 +15,7 @@ import { send } from 'emailjs-com';
 
 
 
-export default function Footer() {
+export default function Footer({language}) {
     
     const [message, setMessage] = useState(false);
 
@@ -46,7 +48,10 @@ export default function Footer() {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
       };
 
+     
+
     return(
+        <I18nPropvider locale={language}>
         <div className="footer" id="footer">
 
            
@@ -58,7 +63,7 @@ export default function Footer() {
                         <img className="dscLogo" alt="" src={dsc}></img>
                     </div>
                     <div className="rightCard">
-                        <h3>Escribeme en discord!</h3>
+                        <h3>{translate('discord msg')}</h3>
                     </div>
 
                 </a>
@@ -67,7 +72,7 @@ export default function Footer() {
                     <Instagram className="dscLogo" />
                     </div>
                     <div className="rightCard">
-                        <h3>Sigueme en Instagram!</h3>
+                        <h3>{translate('instagram msg')}</h3>
                     </div>
                 </a>
                 <a className="item" href="https://www.linkedin.com/in/juan-pablo-martinez-contreras-2bb193211/">
@@ -75,7 +80,7 @@ export default function Footer() {
                         <LinkedIn className="dscLogo" />
                     </div>
                     <div className="rightCard">
-                        <h3>Encuentrame en LinkeIn!</h3>
+                        <h3>{translate('linkedin msg')}</h3>
                     </div>
                 </a>
                 <a className="item" href={hv} download={hv}>
@@ -83,7 +88,7 @@ export default function Footer() {
                     <Person className="dscLogo" />
                     </div>
                     <div className="rightCard">
-                        <h3>Descarga mi hoja de vida!</h3>
+                        <h3>{translate('hv msg')}</h3>
                     </div>
                 </a>
                 <div className="item Mobile" href="">
@@ -108,14 +113,14 @@ export default function Footer() {
             </div>
             <div className="right">
                 <div className="wholeRight">
-                <h2>Contact</h2>
+                <h2>{translate('contact')}</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="email" name='email' value={toSend.email} onChange={handleChange}/>
-                    <textarea placeholder="message" name='message' value={toSend.message} onChange={handleChange}></textarea>
-                    <button type="submit" onClick={()=> setMessage(!message)}>send</button>
+                    <textarea placeholder={"msg" + translate('msg')} name='message' value={toSend.message} onChange={handleChange}></textarea>
+                    <button type="submit" onClick={()=> setMessage(!message)}>{translate('send msg')}</button>
                     
                 </form>
-                {message && <span>Gracias! Responderé lo más pronto posible! :D</span>}
+                {message && <span>{translate('thanks msg')}</span>}
                 </div>
 
             </div>
@@ -131,6 +136,7 @@ export default function Footer() {
             
 
         </div>
+        </I18nPropvider>
     )
 
 }

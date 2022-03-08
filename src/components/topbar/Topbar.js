@@ -2,12 +2,23 @@ import "./topbar.scss"
 import logoo from "./logo.png"
 import {Mail, Phone} from "@material-ui/icons"
 import logob from "./logob.PNG"
+import Application from '../button/Switch'
+
+//import {FormattedMessage} from "react-intl";
+import { I18nPropvider, LOCALES } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
 
 
-export default function Topbar({menuOpen, setMenuOpen, queMenu, setQueMenu, topbarColor, setTopbarColor}) {
+
+export default function Topbar({menuOpen, setMenuOpen, queMenu, setQueMenu, topbarColor, setTopbarColor, setLanguage, language}) {
+    
+    function a(){
+        setLanguage(language === LOCALES.ENGLISH ? LOCALES.SPANISH : LOCALES.ENGLISH);
+    }
     
 
     return(
+        <I18nPropvider locale={language}>
         <div className={"topbar " + (menuOpen && "active") + queMenu + " " + topbarColor}>
             <div className="wrapper">
                 <div className="left">
@@ -24,6 +35,8 @@ export default function Topbar({menuOpen, setMenuOpen, queMenu, setQueMenu, topb
                     
                 </div>
                 <div className="right">
+                    
+                    <Application/>
                     <div className="hamburguer" onClick={()=> setMenuOpen(!menuOpen)}>
                         <span className="line1"> </span>
                         <span className="line2"> </span>
@@ -33,6 +46,7 @@ export default function Topbar({menuOpen, setMenuOpen, queMenu, setQueMenu, topb
                 </div>
             </div>
         </div>
+        </I18nPropvider>
     )
 
 

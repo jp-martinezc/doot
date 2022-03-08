@@ -127,6 +127,17 @@
             }
             
         }
+        .es{
+            &.en-us{
+                display: none;
+            }
+        }
+        .en{
+            &.es-CO{
+                display: none;
+                opacity: 0;
+            }
+        }
 
         span{
             font-size: 40px;

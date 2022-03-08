@@ -5,6 +5,7 @@ $yellow2: #FFE682;
 $width: 820px;
 $widthtabla: 1150px;
 $height: 600px;
+$muyPeques: 300px;
 
 @mixin mobile{
         @media (max-width: #{$width}){
@@ -20,6 +21,12 @@ $height: 600px;
 
 @mixin tabla{
     @media (max-width: #{$widthtabla}){
+        @content
+    }
+};
+
+@mixin muypeques{
+    @media (max-width: #{$muyPeques}){
         @content
     }
 };

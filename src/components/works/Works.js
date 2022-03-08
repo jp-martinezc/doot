@@ -4,8 +4,10 @@ import kimberly from '../../images/kimberly.png';
 import yo from '../../images/yo.png'
 import {Instagram, ChevronLeft, ChevronRight, Work, Person} from "@material-ui/icons";
 import React, {  useState } from "react";
+import { I18nPropvider } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
 
-export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}) {
+export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor, language}) {
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -14,7 +16,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
             id:1,
             icon: "instagram",
             title: "BungoMyDingo!",
-            desc: "BungoMyDingo es un proyecto en donde tengo mis ilustraciones, variando desde la primera imagen que se me venga a la cabeza hasta mis perritos!",
+            desc: translate('bungo'),
             img: bungo,
             imgcn: "bungo",
             link: true,
@@ -25,7 +27,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
             id:2,
             icon: "work",
             title: "Kimberly-Clark",
-            desc: "Realicé mis practicas academicas en la compañía Kimeberly-Clark, en donde me desempeñé como desarrollador en back y front para mejorar el funcionamiento de sus máquinas, mostrando datos cruciales analizados con herramientas de analítica.",
+            desc: translate('kimberly'),
             img: kimberly,
             imgcn: "kimberly",
             link: false,
@@ -36,8 +38,8 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
         {
             id:3,
             icon: "person",
-            title: "Proximamente!",
-            desc: "Actualmente estoy trabajando en muchos nuevos proyectos para mostrar! :D",
+            title: translate('next'),
+            desc: translate('developing'),
             img: yo,
             imgcn: "yo",
             link: false,
@@ -54,6 +56,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
     }
 
     return(
+        <I18nPropvider locale={language}>
         <div className="works" id="works" onMouseOver={() => a()} onTouchMove={()=> a()} onDrag={()=> a()} onTouchMoveCapture={()=> a()}> 
         <div className="slider" style={{transform: `translateX(-${currentSlide *100}vw)` }}>
         
@@ -87,6 +90,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
             <ChevronRight className="rightArrow" onClick={()=>handleClick()}/>
 
         </div>
+        </I18nPropvider>
     )
 
     function a (){
@@ -120,7 +124,7 @@ export default function Works({queMenu, setQueMenu, setMenuOpen, setTopbarColor}
     function mapLink(poner, texto){
         if(poner){
             return(
-                <a href={texto} className="link">Click aqui para ver mas!</a>
+                <a href={texto} className="link">{translate('click')}</a>
             )
         }
 

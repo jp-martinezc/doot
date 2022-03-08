@@ -87,6 +87,9 @@
             @include tabla{
             width: 600px;
             }
+            @include muypeques{
+                
+            }
 
 
             .left{
@@ -131,6 +134,9 @@
                         @include mobile{
                             font-size: 11px;
                             margin-bottom: 0;
+                        }
+                        @include muypeques{
+                            font-size: 9px;
                         }
                     }
 

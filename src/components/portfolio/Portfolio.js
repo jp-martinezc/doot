@@ -6,9 +6,11 @@ import {featuredPortfolio,
       mobilePortfolio,
        designPortfolio,
         dataPortfolio } from '../../data';
+import { I18nPropvider } from '../../i18nProvider';
+import translate from "../../i18nProvider/translate";
 
 
-export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
+export default function Portfolio( {queMenu, setQueMenu, setTopbarColor, language} ) {
 
     const [movido, setMovido] = useState("nomovido");
     
@@ -18,23 +20,23 @@ export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
     const list = [
         {
             id: "featured",
-            title: "Featured",
+            title: translate('Featured'),
         },
         {
             id: "web",
-            title: "Web App",
+            title: translate('Web App'),
         },
         {
             id: "mobile",
-            title: "Mobile App",
+            title: translate('Mobile App'),
         },
         {
             id: "design",
-            title: "Design",
+            title: translate('Design'),
         },
         {
             id: "data",
-            title: "Data",
+            title: translate('Data'),
         },
     ];
 
@@ -62,12 +64,13 @@ export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
     },[selected]);
 
     return(
+        <I18nPropvider locale={language} className="meh">
         <div className={"portfolio " + movido} id="portfolio" onMouseOver={()=> a()} onTouchMove={()=> a()} onTouchMoveCapture={()=> a()}>
             
 
             <div className="cartuchis"> 
     <div>
-    <h1>Skills</h1>
+    <h1>{translate('Skills')}</h1>
     </div>
           
             <ul>
@@ -98,6 +101,7 @@ export default function Portfolio( {queMenu, setQueMenu, setTopbarColor} ) {
             
 
         </div>
+        </I18nPropvider>
     )
 
     function a (){

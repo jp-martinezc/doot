@@ -16,13 +16,16 @@
     align-items: center ;
     justify-content: center;
     clip-path: polygon(calc(100vh - 35vh) 0, 100% 0%, 100% 100%, calc(100vh - 55vh) 100%);
-    color:white;
+    
     transition: all 1.5s ease;
     @include mobile{
         clip-path: polygon(calc(100vh - 23vh) 0, 100% 0%, 100% 100%, calc(100vh - 33vh) 100%);
     }
     @include short{
         clip-path: polygon(calc(100vh - 5vh) 0, 100% 0%, 100% 100%, calc(100vh - 15vh) 100%);
+    }
+    @include muypeques{
+        clip-path: polygon(calc(100vh) 0, 100% 0%, 100% 100%, calc(100vh) 100%);
     }
     
 
@@ -34,8 +37,9 @@
         list-style: none;
         font-size: 35px;
         font-weight: 300;
-        color: rgb(12,12,12);
+        
         z-index: 2;
+        transition: all 1.5s ease;
         @include mobile{
             font-size: 23px;
             right: 15px;
@@ -45,6 +49,7 @@
             margin-bottom: 25px;
             margin-right: 100px;
             margin-left: 100px;
+           
             a{
                 font-size: inherit;
                 color: inherit;
@@ -59,26 +64,31 @@
             position: relative;
             right: -600px;
             transition: all 2s ease;
+            color: rgb(12,12,12);
         }
         .p{
             position: relative;
             right: -600px;
             transition: all 2.2s ease;
+            color: rgb(12,12,12);
         }
         .w{
             position: relative;
             right: -600px;
             transition: all 2.4s ease;
+            color: rgb(12,12,12);
         }
         .d{
             position: relative;
             right: -600px;
             transition: all 2.6s ease;
+            color: rgb(12,12,12);
         }
         .f{
             position: relative;
             right: -600px;
             transition: all 2.8s ease;
+            color: rgb(12,12,12);
         }
         
     }
@@ -132,12 +142,12 @@
     &.activenegro{
         right: 0;
         background-color: rgb(12,12,12);
-        color: $mainColor;
+        
         .list{
             .i{
                 position: relative;
                 right: -105px;
-                color: white;
+                color: $mainColor;
                 @include mobile{
                     
                 }
