@@ -7,8 +7,8 @@
   
   position: relative;
   padding: 0 10px;
-  color: #fff;
-  background: #329da3;
+  color: rgb(0, 0, 0);
+  background: #4d89a5;
   transition: all 0.5s;
   cursor: pointer;
   text-align: left;
@@ -27,12 +27,12 @@
   right: 2px;
   top: 2px;
   transition: right 0.7s;
-  color: #329da3;
+  color: #253CB0;
   overflow-y: hidden;
 }
 
 .close {
-  background: #feae23;
+  background: #9e8c41;
   text-align: right;
 }
 
