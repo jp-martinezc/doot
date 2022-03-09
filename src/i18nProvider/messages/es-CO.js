@@ -2,7 +2,6 @@ import { LOCALES } from '../constants';
 
 const spanish = {
   [LOCALES.SPANISH]: {
-    'edit-file': 'Edit {file} and save to reload.',
     'hello': 'Hola! soy',
     'language': 'ES',
     'im': 'Soy un ',

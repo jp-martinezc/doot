@@ -1,16 +1,14 @@
-import { LOCALES } from '../constants';
 
-export default {
-  [LOCALES.ENGLISH]: {
-    'edit-file': 'Edit {file} and save to reload.',
-    'hello': 'Hi! I' + 'm',
+const a = [
+  {
+    'hello': 'Hi! Im',
     'language': 'EN',
     'im': 'Im a ',
     'listim': 'Dog Lover',
     'Intro': 'Intro',
     'Portfolio': 'Portfolio',
     'Skills': 'Skills',
-    'contact': 'Contact',
+    'Contact': 'Contact',
     'Featured': 'Featured',
     'Web App': 'Web App',
     'Mobile App': 'Mobile App',
@@ -29,5 +27,8 @@ export default {
     'msg': 'message',
     'send msg': 'send',
     'thanks msg': 'Thanks! Ill reply ASAP!',
-  },
-};
+  }
+
+]
+
+export default a;
