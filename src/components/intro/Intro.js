@@ -7,7 +7,7 @@ import yo from '../../images/yo.png';
 import yoAsustado from '../../images/yoAsustado.png';
 
 //import {FormattedMessage} from "react-intl";
-import { I18nPropvider, LOCALES } from '../../i18nProvider';
+import { I18nPropvider } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 
 
@@ -32,12 +32,7 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTo
     const textRef = useRef();
     const textRef2 = useRef();
 
-    const whatAmI = [
-        'Developer', 'Software Engineer', 'Designer', 'Dog Lover' 
-    ];
-    const queSoy = [
-        'Desarrollador', 'Ingeniero de Sistemas', 'Diseñador', 'Amante de Perros' 
-    ];
+    
 
 
 
@@ -45,13 +40,15 @@ export default function Intro({menuOpen, setMenuOpen, queMenu, setQueMenu, setTo
         
         init(textRef.current, { 
             showCursor: false, 
-            strings: whatAmI
+            strings: [
+                'Developer', 'Software Engineer', 'Designer', 'Dog Lover' ]
             
             
         })
         init(textRef2.current, { 
             showCursor: false, 
-            strings: queSoy
+            strings: [
+                'Desarrollador', 'Ingeniero de Sistemas', 'Diseñador', 'Amante de Perros' ]
             
             
         })  

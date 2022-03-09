@@ -7,7 +7,7 @@ import Menu from "./components/menu/Menu"
 import "./app.scss"
 import { useState } from "react"
 //import {FormattedMessage} from "react-intl";
-import { I18nPropvider, LOCALES } from './i18nProvider';
+import { LOCALES } from './i18nProvider';
 //import translate from "./i18nProvider/translate";
 
 function App() {
