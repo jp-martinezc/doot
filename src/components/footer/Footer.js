@@ -5,7 +5,7 @@ import {Instagram, LinkedIn, Person,Phone, Email} from "@material-ui/icons"
 import dsc from '../../images/discord.png';
 import hv from '../../documents/JuanPabloMartinez.pdf'
 import { send } from 'emailjs-com';
-import { I18nPropvider } from '../../i18nProvider';
+import { I18nPropvider, LOCALES } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
 
 
@@ -116,7 +116,7 @@ export default function Footer({language}) {
                 <h2>{translate('contact')}</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="email" name='email' value={toSend.email} onChange={handleChange}/>
-                    <textarea placeholder={"msg" + translate('msg')} name='message' value={toSend.message} onChange={handleChange}></textarea>
+                    <textarea placeholder={language === LOCALES.ENGLISH ? "message" : "mensaje"} name='message' value={toSend.message} onChange={handleChange}></textarea>
                     <button type="submit" onClick={()=> setMessage(!message)}>{translate('send msg')}</button>
                     
                 </form>

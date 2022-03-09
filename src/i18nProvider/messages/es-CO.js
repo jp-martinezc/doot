@@ -1,6 +1,6 @@
 import { LOCALES } from '../constants';
 
-export default {
+const spanish = {
   [LOCALES.SPANISH]: {
     'edit-file': 'Edit {file} and save to reload.',
     'hello': 'Hola! soy',
@@ -10,7 +10,7 @@ export default {
     'Intro': 'Intro',
     'Portfolio': 'Portafolio',
     'Skills': 'Habilidades',
-    'Contact': 'Contacto',
+    'contact': 'Contacto',
     'Featured': 'Destacados',
     'Web App': 'Desarrollo Web',
     'Mobile App': 'Desarrollo Mobil',
@@ -31,3 +31,5 @@ export default {
     'thanks msg': 'Gracias! responderé lo más pronto posible',
   },
 };
+
+export default spanish;

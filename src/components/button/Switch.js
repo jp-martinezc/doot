@@ -1,7 +1,13 @@
 import React from "react";
 import "./button.css"
+import { LOCALES } from '../../i18nProvider';
+
+
 
 class Switch extends React.Component {
+
+   
+
   getClasses = () => {
      let className = "switch";
      if(this.props.status) className += " close";
@@ -11,12 +17,15 @@ class Switch extends React.Component {
   render() {
     return (
     <button className={this.getClasses()} onClick={this.props.onChange}>
-        { this.props.close ? '关' : '开' }
+        
+        <div>{this.props.language === LOCALES.ENGLISH ? "EN": "ES" }</div>
+        {console.log(this.props.language)}
+        
         {
           this.props.loading ?
             <span className="switch__btn switch__btn_loading">x</span>
           :
-            <span className="switch__btn"></span>
+            <span className="switch__btn">a</span>
         }
       </button>
     );
@@ -36,23 +45,25 @@ class Application extends React.Component {
     this.setState({
       switchLoading: true,
     });
+    this.props.setLanguage(this.props.language === LOCALES.ENGLISH ? LOCALES.SPANISH : LOCALES.ENGLISH);
     // 模拟异步加载     
     window.setTimeout(() => {
       this.setState({
         switchStatus: !status,
         switchLoading: false,
       });
-    }, 1000);
+    }, 500);
   };
 
   render() {
     return (
       <section>
-        <h3>开关按钮</h3>
+        
         <Switch
           status={this.state.switchStatus}
           loading={this.state.switchLoading}
           onChange={this.handleSwitch}
+          language={this.props.language}
         />
       </section>
     ); 

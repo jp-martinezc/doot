@@ -4,6 +4,7 @@
   width: 60px;
   line-height: 24px;
   border-radius: 12px;
+  
   position: relative;
   padding: 0 10px;
   color: #fff;
@@ -12,19 +13,22 @@
   cursor: pointer;
   text-align: left;
   outline: none;
+  overflow-y: hidden;
+  
 }
 
 .switch__btn {
   width: 20px;
-  line-height: 20px;
-  height: 20px;
+  line-height: 60px;
+  height: 20px !important;
   border-radius: 50%;
   background: #fff;
   position: absolute;
   right: 2px;
   top: 2px;
-  transition: right 0.5s;
+  transition: right 0.7s;
   color: #329da3;
+  overflow-y: hidden;
 }
 
 .close {
@@ -44,6 +48,11 @@
 .loading {
   opacity: .5;
   cursor: not-allowed;
+}
+.aver{
+  background-color: black;
+  height: 12px;
+  width: 3px;
 }
 
 @keyframes ani-loading {
