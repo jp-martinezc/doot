@@ -57,6 +57,11 @@
                     opacity: 0;
                     width: 85%;
                 }
+                @include muypeques{
+                    display: 0;
+                    width: 40%;
+                    margin-left: 0px;
+                }
 
                 .basicInfo{
                     font-size: large;
@@ -65,6 +70,11 @@
                     color: white;
                     @include mobile{
                         opacity: 0; 
+                        height: 0;
+                    }
+                    @include muypeques{
+                        display: 0;
+                        height: 0;
                     }
                 }
 
@@ -74,6 +84,9 @@
                     @include mobile{
                         opacity: 0; 
                     }
+                    @include muypeques{
+                        display: 0;
+                    }
                 }
             }
         }
@@ -81,12 +94,16 @@
         .right{
             display: flex;
             flex-direction: row;
+            justify-content: center;
 
 
             .switch{
                 margin-right: 40px;
                 @include mobile{
                     margin-right: 80px;
+                }
+                @include muypeques{
+                    margin-right: 320px;
                 }
             }
 
@@ -98,6 +115,11 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
+                @include muypeques{
+                    width: 100px;
+                }
+                
+                
                         }
                         .line1{
                             width: 100%;

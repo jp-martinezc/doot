@@ -11,7 +11,7 @@ const english = {
     'Portfolio': 'Portfolio',
     'Skills': 'Skills',
     'contact': 'Contact',
-    'Contact': 'Contactaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    'Contact': 'Contact',
     'Featured': 'Featured',
     'Web App': 'Web App',
     'Mobile App': 'Mobile App',

@@ -26,6 +26,7 @@
         align-items: center;
         
         justify-content: space-around;
+        
 
         .leftContainer{
             
@@ -56,6 +57,11 @@
                     display: flex;
                     
                 }
+                @include short{
+                    width: 95%;
+                    flex-direction: row;
+                }
+
 
                 &:hover{
                     width: 320px;
