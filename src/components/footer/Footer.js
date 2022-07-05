@@ -4,6 +4,7 @@ import mapa from '../../images/where.png';
 import {Instagram, LinkedIn, Person,Phone, Email} from "@material-ui/icons"
 import dsc from '../../images/discord.png';
 import hv from '../../documents/JuanPabloMartinez.pdf'
+import hven from '../../documents/JuanPabloMartinezEng.pdf'
 import { send } from 'emailjs-com';
 import { I18nPropvider, LOCALES } from '../../i18nProvider';
 import translate from "../../i18nProvider/translate";
@@ -83,7 +84,7 @@ export default function Footer({language}) {
                         <h3>{translate('linkedin msg')}</h3>
                     </div>
                 </a>
-                <a className="item" href={hv} download={hv}>
+                <a className="item" href={language === LOCALES.ENGLISH ? hven : hv} download={language === LOCALES.ENGLISH ? hven : hv}>
                 <div className="leftCard">
                     <Person className="dscLogo" />
                     </div>

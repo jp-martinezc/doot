@@ -1,9 +1,8 @@
-
-import { Map, GoogleApiWrapper} from 'google-maps-react';
+import { Height } from '@material-ui/icons';
+import { Map, GoogleApiWrapper, GoogleMap, withScriptsjs, withGoogleMap } from 'google-maps-react';
 import {Component} from "react";
-
-
-
+const apiKey = process.env.GOOGLE_API;
+require('dotenv').config();
 
 
 
@@ -25,6 +24,6 @@ class MapContainer extends Component{
 export default GoogleApiWrapper({
 
     
-    apiKey:""
+    apiKey:"AIzaSyAqEh4vzP9W7pP4WhC5mgYK12GwVxfP_W4"
 
 })(MapContainer)

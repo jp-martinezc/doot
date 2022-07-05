@@ -18,14 +18,14 @@ class Switch extends React.Component {
     return (
     <button className={this.getClasses()} onClick={this.props.onChange}>
         
-        <div>{this.props.language === LOCALES.ENGLISH ? "EN": "ES" }</div>
+        <div className="cambioIdioma">{this.props.language === LOCALES.ENGLISH ? "EN": "ES" }</div>
         {console.log(this.props.language)}
         
         {
           this.props.loading ?
             <span className="switch__btn switch__btn_loading">x</span>
           :
-            <span className="switch__btn">a</span>
+            <span className="switch__btn"><div className="aver"></div></span>
         }
       </button>
     );

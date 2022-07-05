@@ -1,7 +1,9 @@
 import { LOCALES } from '../constants';
 
-const spanish = {
+
+export default {
   [LOCALES.SPANISH]: {
+    'edit-file': 'Edit {file} and save to reload.',
     'hello': 'Hola! soy',
     'language': 'ES',
     'im': 'Soy un ',
@@ -10,10 +12,9 @@ const spanish = {
     'Portfolio': 'Portafolio',
     'Skills': 'Habilidades',
     'contact': 'Contacto',
-    'Contact': 'Contacto',
     'Featured': 'Destacados',
     'Web App': 'Desarrollo Web',
-    'Mobile App': 'Desarrollo Movil',
+    'Mobile App': 'Desarrollo Mobil',
     'Design': 'Diseño',
     'Data':'Data',
     'bungo': 'BungoMyDingo es un proyecto en donde tengo mis ilustraciones, variando desde la primera imagen que se me venga a la cabeza hasta mis perritos!',
@@ -31,5 +32,3 @@ const spanish = {
     'thanks msg': 'Gracias! responderé lo más pronto posible',
   },
 };
-
-export default spanish;
